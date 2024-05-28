@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "esModuleInterop": true,
+    "module": "esnext",
     "target": "es2019",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "moduleResolution": "bundler",
     "outDir": "./dist"
   },
   "include": [
     "src/**/*"
-  ]
+  ],
+  "paths": {
+    "~/*": ["./src/*"]
+  }
 }
