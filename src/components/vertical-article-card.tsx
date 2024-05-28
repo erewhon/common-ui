@@ -1,9 +1,15 @@
 import { Article } from "./types";
 import { formatDate } from "../lib/formatting-utils";
 
-export function VerticalArticleCard({ article }: { article: Article }) {
+export function VerticalArticleCard({
+  postType: string,
+  article,
+}: {
+  postType: string;
+  article: Article;
+}) {
   return (
-    <a href={`/articles/${article.slug}`}>
+    <a href={`/${postType}/${article.slug}`}>
       <div
         className={
           "h-[360px] p-5 border border-gray-700 rounded hover:shadow hover:scale-110 transition-all bg-black hover:bg-gray-600 flex flex-col items-center"

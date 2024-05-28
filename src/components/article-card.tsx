@@ -2,7 +2,13 @@ import { Article } from "./types";
 import { Card } from "./card";
 import { formatDate } from "../lib/formatting-utils";
 
-export function ArticleCard({ article }: { article: Article }) {
+export function ArticleCard({
+  postType: string,
+  article,
+}: {
+  postType: string;
+  article: Article;
+}) {
   return (
     <article className="relative md:grid md:grid-cols-5 md:items-start">
       <Card className={"md:col-span-4 md:space-x-5"}>
@@ -16,7 +22,9 @@ export function ArticleCard({ article }: { article: Article }) {
           )}
         </Card.Image>
         <Card.Content>
-          <Card.Title href={`${article.url}`}>{article.title}</Card.Title>
+          <Card.Title href={`/${postType}/${article.slug}`}>
+            {article.title}
+          </Card.Title>
           <Card.Eyebrow
             as="time"
             dateTime={article.date}
