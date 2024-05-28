@@ -1,13 +1,12 @@
 import { Article } from "./types";
 import { formatDate } from "../lib/formatting-utils";
 
-export function VerticalArticleCard({
-  postType: string,
-  article,
-}: {
+type Props = {
   postType: string;
   article: Article;
-}) {
+};
+
+export function VerticalArticleCard({ postType, article }: Props) {
   return (
     <a href={`/${postType}/${article.slug}`}>
       <div
