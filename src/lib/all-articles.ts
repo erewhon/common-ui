@@ -2,11 +2,12 @@ import glob from "fast-glob";
 import * as fs from "node:fs";
 import { Article } from "../components/types";
 
-const RootDir = "./src/app/articles";
-
-async function importArticle(filename: string): Promise<Article> {
+async function importArticle(
+  rootDir: string,
+  filename: string,
+): Promise<Article> {
   const metadata = JSON.parse(
-    fs.readFileSync(`${RootDir}/${filename}`, "utf8"),
+    fs.readFileSync(`${rootDir}/${filename}`, "utf8"),
   );
 
   return {
@@ -15,14 +16,16 @@ async function importArticle(filename: string): Promise<Article> {
   };
 }
 
-export async function getAllArticles() {
+export async function getAllArticles(rootDir: string): Promise<Article[]> {
   let articleFilenames = await glob("**/content.json", {
-    cwd: RootDir,
+    cwd: rootDir,
   });
 
   // console.log(articleFilenames);
 
-  const articles = await Promise.all(articleFilenames.map(importArticle));
+  const articles = await Promise.all(
+    articleFilenames.map((filename) => importArticle(rootDir, filename)),
+  );
 
   // console.log(articles.sort((a, z) => +new Date(z.date) - +new Date(a.date)));
 
