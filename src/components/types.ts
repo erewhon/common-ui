@@ -10,5 +10,6 @@ export type Article = {
   socialDescription?: string; // Longer former description for social media (Instagram, Threads, etc.)
   hideDisclosure?: boolean;
   slug?: string;
+  url?: string;
   // content: React.ReactNode;
 };
