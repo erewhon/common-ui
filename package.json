@@ -1,8 +1,9 @@
 {
-  "name": "common-ui",
-  "version": "1.0.0",
+  "name": "@steve.net/common",
+  "version": "1.0.1",
   "description": "Little UI common code",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "",
     "build": "tsc",
