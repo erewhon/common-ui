@@ -1,3 +1,4 @@
+import React from "react";
 import { Article } from "./types";
 import { Card } from "./card";
 import { formatDate } from "../lib/formatting-utils";

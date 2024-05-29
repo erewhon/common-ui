@@ -5,14 +5,15 @@
     "target": "es2019",
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "incremental": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "outDir": "./dist"
   },
   "include": [
     "src/**/*"
   ],
+  "exclude": ["dist", "node_modules"],
   "paths": {
     "~/*": ["./src/*"]
   }

@@ -1,3 +1,4 @@
+import React from "react";
 import { PropsWithChildren } from "react";
 import { formatDate } from "../lib/formatting-utils";
 import { Disclosure } from "./disclosure";

@@ -1,10 +1,10 @@
-import clsx from "clsx";
 import React from "react";
+import clsx from "clsx";
 
 export function Prose({
-                        className,
-                        ...props
-                      }: React.ComponentPropsWithoutRef<"div">) {
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"div">) {
   return (
     <div
       className={clsx(
