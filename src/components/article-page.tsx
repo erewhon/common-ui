@@ -17,6 +17,7 @@ export function ArticlePage({
             <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               {article.title}
             </h1>
+            {article.subtitle && <h2>{article.subtitle}</h2>}
             <time
               dateTime={article.date}
               className="flex items-center text-base text-zinc-400 dark:text-zinc-500 mt-1"
