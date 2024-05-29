@@ -12,7 +12,7 @@ export function VerticalArticleCard({ postType, article }: Props) {
     <a href={`/${postType}/${article.slug}`}>
       <div
         className={
-          "h-96 w-64 p-5 border border-gray-700 rounded hover:shadow hover:scale-110 transition-all bg-black hover:bg-gray-600 flex flex-col items-center"
+          "h-96 w-64 p-5 border border-gray-700 rounded hover:shadow hover:text-gray-300 hover:scale-110 transition-all bg-black hover:bg-gray-600 flex flex-col items-center"
         }
       >
         <div>
