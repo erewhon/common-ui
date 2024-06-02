@@ -1,6 +1,6 @@
 {
   "name": "@steve.net/common",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Little UI common code",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

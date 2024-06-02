@@ -22,9 +22,11 @@ export function VerticalArticleCard({ postType, article }: Props) {
           />
         </div>
         <div className={"mt-2 w-56 truncate mx-auto"}>{article.title}</div>
-        <div className={"text-xs text-slate-600"}>
-          {formatDate(article.date)}
-        </div>
+        {article.date && (
+          <div className={"text-xs text-slate-600"}>
+            {formatDate(article.date)}
+          </div>
+        )}
         <div className={"text-sm w-56 mt-2 line-clamp-3"}>
           {article.description}
         </div>

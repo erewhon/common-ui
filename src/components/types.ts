@@ -1,5 +1,5 @@
 export type Article = {
-  date: string;
+  date?: string;
   title: string;
   subtitle?: string;
   description?: string;
