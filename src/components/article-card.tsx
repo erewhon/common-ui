@@ -3,12 +3,12 @@ import { Article } from "./types";
 import { Card } from "./card";
 import { formatDate } from "../lib/formatting-utils";
 
-type Props = {
+export type ArticleCardProps = {
   postType: string;
   article: Article;
 };
 
-export function ArticleCard({ postType, article }: Props) {
+export function ArticleCard({ postType, article }: ArticleCardProps) {
   return (
     <article className="relative md:grid md:grid-cols-5 md:items-start">
       <Card className={"md:col-span-4 md:space-x-5"}>

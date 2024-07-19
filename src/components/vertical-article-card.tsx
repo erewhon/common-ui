@@ -12,7 +12,7 @@ export function VerticalArticleCard({ postType, article }: Props) {
     <a href={`/${postType}/${article.slug}`}>
       <div
         className={
-          "h-96 w-72 p-5 border border-gray-700 rounded hover:shadow hover:text-gray-300 hover:scale-110 transition-all bg-black hover:bg-gray-600 flex flex-col items-center"
+          "h-96 w-72 p-5 border border-gray-700 text-gray-400 rounded-lg hover:shadow hover:text-gray-300 hover:scale-110 transition-all bg-black hover:bg-gray-600 flex flex-col items-center"
         }
       >
         <div>
@@ -23,7 +23,7 @@ export function VerticalArticleCard({ postType, article }: Props) {
         </div>
         <div className={"mt-2 max-w-64 truncate mx-auto"}>{article.title}</div>
         {article.date && (
-          <div className={"text-xs text-slate-600"}>
+          <div className={"text-xs font-light text-white"}>
             {formatDate(article.date)}
           </div>
         )}
